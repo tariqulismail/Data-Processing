@@ -4,9 +4,9 @@ services:
   airflowproject:
     image: airflow-project:latest
     environment:
-      - AWS_ACCESS_KEY_ID=AKIAXYKJTWHWWSIZBQXI
-      - AWS_SECRET_ACCESS_KEY=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
-      - YOUTUBE_API_KEY=AIzaSyC9e_LXg_F5v8rdjgg2qj3cWDjrQ8ws2Ow
+      - AWS_ACCESS_KEY_ID=AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY=AWS_SECRET_ACCESS_KEY
+      - YOUTUBE_API_KEY=YOUTUBE_API_KEY
     volumes:
       - ./airflow:/opt/airflow
     ports:
