@@ -1,0 +1,18 @@
+[2024-12-03T08:49:26.779+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-03T08:49:26.785+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: youtube_etl_dag.load_data_to_s3 manual__2024-12-03T08:48:34.819908+00:00 [queued]>
+[2024-12-03T08:49:26.789+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: youtube_etl_dag.load_data_to_s3 manual__2024-12-03T08:48:34.819908+00:00 [queued]>
+[2024-12-03T08:49:26.789+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-12-03T08:49:26.800+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): load_data_to_s3> on 2024-12-03 08:48:34.819908+00:00
+[2024-12-03T08:49:26.807+0000] {standard_task_runner.py:72} INFO - Started process 302 to run task
+[2024-12-03T08:49:26.815+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'youtube_etl_dag', 'load_data_to_s3', 'manual__2024-12-03T08:48:34.819908+00:00', '--job-id', '77', '--raw', '--subdir', 'DAGS_FOLDER/youtube_etl_dag.py', '--cfg-path', '/tmp/tmp1ncq1ln0']
+[2024-12-03T08:49:26.818+0000] {standard_task_runner.py:105} INFO - Job 77: Subtask load_data_to_s3
+[2024-12-03T08:49:26.863+0000] {task_command.py:467} INFO - Running <TaskInstance: youtube_etl_dag.load_data_to_s3 manual__2024-12-03T08:48:34.819908+00:00 [running]> on host e424cefc2cc1
+[2024-12-03T08:49:26.909+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='youtube_etl_dag' AIRFLOW_CTX_TASK_ID='load_data_to_s3' AIRFLOW_CTX_EXECUTION_DATE='2024-12-03T08:48:34.819908+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-03T08:48:34.819908+00:00'
+[2024-12-03T08:49:26.909+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-03T08:49:27.034+0000] {youtube_etl_dag.py:170} INFO - Uploading /opt/airflow/Transformed_Youtube_Data_20241203/part-00000-f290ecc3-9565-4a0b-bcc3-67688a02507c-c000.csv to s3://awsprbucket/processed-data/2024/12/03/part-00000-f290ecc3-9565-4a0b-bcc3-67688a02507c-c000.csv
+[2024-12-03T08:49:36.491+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-12-03T08:49:36.521+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-03T08:49:36.522+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=youtube_etl_dag, task_id=load_data_to_s3, run_id=manual__2024-12-03T08:48:34.819908+00:00, execution_date=20241203T084834, start_date=20241203T084926, end_date=20241203T084936
+[2024-12-03T08:49:36.563+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-03T08:49:36.575+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-03T08:49:36.576+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
